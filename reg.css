@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:greenyellow;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+}
+.reg-container{
+    margin-top:7%;
+    width:500px;
+    height:500px;
+    background:linear-gradient(to top,red,blue);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 4% 50%;
+}
+form h2{
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.inpts input{
+    width:250px;
+    height:37px;
+    padding:7px;
+    outline:none;
+    margin:2%;
+    border:transparent;
+    border-bottom:2px  solid green;
+    background:transparent;
+
+}
+::placeholder{
+    color:rgb(26, 255, 0);
+}
+.reg{
+    display:flex;
+    justify-content:center;
+    height:37px;
+    align-items:center;
+    margin:4%;
+}
+.reg button{
+    height:37px;
+    width:120px;
+    border-radius:12px;
+    border:1px solid green;
+    font-size:1.2rem;
+    font-weight:550;
+    background:linear-gradient(to bottom,rgba(255, 0, 0, 0.823),rgba(0, 0, 255, 0.823));
+}
+p{
+    font-size:1.1rem;
+    display:flex;
+    justify-content:space-between;
+}
+.tr{
+    display:flex;
+    justify-content:center;
+    margin:40px;
+}
+a{
+    color:aqua;
+    text-decoration:none;
+    font-size:1.2rem;
+    font-weight:550;
+    font-family:cursive;
+}
