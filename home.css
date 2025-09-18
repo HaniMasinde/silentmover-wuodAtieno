@@ -95,7 +95,7 @@ footer p{
     header h2{
         font-size:1.05rem;
         margin-left:2%;
-        margin-right:10%;
+        margin-right:8%;
     }
     header ul{
         margin-right:8%;
@@ -105,7 +105,7 @@ footer p{
     }
     header ul li a{
         color:greenyellow;
-        font-size:.988rem;
+        font-size:.888rem;
     }
     main{
         height:80dvh;
