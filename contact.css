@@ -178,13 +178,13 @@ footer p{
         background:linear-gradient(to right,blue,red);
     }
     .container{
-        width:350px;
-        height:450px;
-        margin-top:-60px;
+        width:380px;
+        height:550px;
+        margin-top:-80px;
         margin-left:-30px;
     }
     .front p{
-        font-size:15px;
+        font-size:17px;
     }
     .back{
         background:slateblue;
@@ -207,6 +207,12 @@ footer p{
     }
     .btn{
         height:25px;
+    }
+    i{
+        margin-top:10px;
+        font-size:25px;
+        margin-left:10px;
+
     }
     .btn button{
         width:80px;

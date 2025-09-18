@@ -123,10 +123,9 @@ footer p{
         height:35px;
         background:rgba(128, 128, 128, 0.282);
     }
-    form .input-field input:focus~label,
-form .input-field input:focus~valid{
-    top:-8px;
-}
+    
+
+
 .login .btn{
     width:140px;
     height:35px;
@@ -135,5 +134,15 @@ form .input-field input:focus~valid{
 }
 .rem a,p a{
     color:rgb(240, 10, 10);
+}
+.rem{
+    margin-left: 4px;
+}
+.rem a{
+    margin-left:15px;
+    font-size: 15px;
+}
+form .input-field{
+    margin-left: 20px;
 }
 }

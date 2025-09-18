@@ -53,8 +53,9 @@ body{
 }
 @media(max-width:415px){
     .big-container{
-        width:350px;
-        height:450px;
+        margin-top:20%;
+        width:370px;
+        height:500px;
     }
     .big-container .image{
         background:yellowgreen;
