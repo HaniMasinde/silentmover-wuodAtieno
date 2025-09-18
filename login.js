@@ -1,89 +1,100 @@
-let usernameInput=document.getElementById('username');
-let emailInput=document.getElementById('email');
-let passwordInput=document.getElementById('password');
-let usernameError=document.getElementById('username_error');
-let emailError=document.getElementById('email_error');
-let passwordError=document.getElementById('passwod_error');
-let regForm=document.getElementById('form');
-let isValid=true;
+let usernameInput = document.getElementById('username');
+let emailInput = document.getElementById('email');
+let passwordInput = document.getElementById('password');
+let usernameError = document.getElementById('username_error');
+let emailError = document.getElementById('email_error');
+let passwordError = document.getElementById('password_error');
+let regForm = document.getElementById('form');
 
-regForm.addEventListener('submit',function(yes){
+regForm.addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    yes.preventDefault();
+    // reset validity and clear previous errors
+    let isValid = true;
+    usernameError.textContent = '';
+    emailError.textContent = '';
+    passwordError.textContent = '';
 
-    function validateUsername(){
-        let username=usernameInput.value.trim();
-        
-        if(username==null||username==''){
-            usernameError.textContent='Username required.'
-            isValid=false;
+    function validateUsername() {
+        const username = usernameInput.value.trim();
+        if (!username) {
+            usernameError.textContent = 'Username required.';
+            isValid = false;
+            return;
         }
-        else if(!username.includes('Hani')){
-            usernameError.textContent='Username must include "Hani"';
-            isValid=false;
+        if (!username.includes('Hani')) {
+            usernameError.textContent = 'Username must include "Hani"';
+            isValid = false;
+            return;
         }
-        else if(username.length<5){
-            usernameError.textContent='Username must have atleast 6 characters';
+        if (username.length < 6) {
+            usernameError.textContent = 'Username must have at least 6 characters';
+            isValid = false;
+            return;
         }
-        else if(username.length>8){
-            usernameError.textContent='Username must have utmost 8 characters';
-            isValid=false;
+        if (username.length > 8) {
+            usernameError.textContent = 'Username must have at most 8 characters';
+            isValid = false;
+            return;
         }
-        else{
-            isValid;
-        }
-
     }
 
-    function validateEmail(){
-        let email=emailInput.value.trim();
-
-        if(email==''||email===null){
-            emailError.textContent='Email required';
-            isValid=false;
+    function validateEmail() {
+        const email = emailInput.value.trim();
+        if (!email) {
+            emailError.textContent = 'Email required';
+            isValid = false;
+            return;
         }
-
-        else if(!email.includes('@')&&!email.includes("'.com")){
-            emailError.textContent='Invalid Email';
-            isValid=false;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            emailError.textContent = 'Invalid Email';
+            isValid = false;
+            return;
         }
-        else{
-            isValid;
-        }
-
     }
 
-    function validatePassword(){
-
-        let password=passwordInput.value.trim();
-
-        if(password==''||password===null){
-            passwordError.textContent='Password Required';
-            isValid=false;
+    function validatePassword() {
+        const password = passwordInput.value.trim();
+        if (!password) {
+            passwordError.textContent = 'Password required';
+            isValid = false;
+            return;
         }
-        else if(password==='password'){
-            passwordError.textContent='Password cannot be password';
-            isValid=false;
+        if (password.toLowerCase() === 'password') {
+            passwordError.textContent = 'Password cannot be "password"';
+            isValid = false;
+            return;
         }
-        else if(!password.includes('0')||!password.includes('2')||!password.includes('4')||!password.includes('6')||!password.includes('8')){
-            passwordError.textContent='password must include an even number';
-            isValid=false;
+        // require at least one even digit
+        if (!/[02468]/.test(password)) {
+            passwordError.textContent = 'Password must include an even number (0,2,4,6,8)';
+            isValid = false;
+            return;
         }
-        else if(password.length<4){
-            passwordError.textContent='password must be atleast 4 characters';
-            isValid=false;
+        if (password.length < 4) {
+            passwordError.textContent = 'Password must be at least 4 characters';
+            isValid = false;
+            return;
         }
-        else if(password.length>6){
-            passwordError.textContent='password must be atmost 6 characters';
-            isValid=false;
+        if (password.length > 6) {
+            passwordError.textContent = 'Password must be at most 6 characters';
+            isValid = false;
+            return;
         }
-        else{
-            isValid;
-        }
-
-    }
-    if(isValid){
-        window.location.href='home.html';
     }
 
-})
+    validateUsername();
+    validateEmail();
+    validatePassword();
+
+    if (isValid) {
+        window.location.href = 'home.html';
+    }
+
+});
+
+// UX: clear field-specific error when user starts typing
+usernameInput.addEventListener('input', () => { usernameError.textContent = ''; });
+emailInput.addEventListener('input', () => { emailError.textContent = ''; });
+passwordInput.addEventListener('input', () => { passwordError.textContent = ''; });
