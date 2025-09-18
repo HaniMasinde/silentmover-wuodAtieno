@@ -1,0 +1,126 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+    background:white;
+    min-height:100vh;
+}
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    height:120px;
+    background:blueviolet;
+    border-radius:15px;
+}
+header h2{
+    font-size:1.6rem;
+    margin-left:15px;
+}
+header ul{
+    margin-right:80px;
+    display:flex;
+    justify-content:space-evenly;
+}
+header ul li{
+    list-style:none;
+    margin-right:35px;
+}
+header ul li a{
+    text-decoration:none;
+    color:yellow;
+    font-size:1.3rem;
+}
+main{
+    height:68.5vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+footer{
+    display:flex;
+    flex-direction:column;
+    height:100px;
+    background:blueviolet;
+    padding:15px;
+    border-radius:15px;
+}
+footer p{
+    text-align:center;
+    font-size:1.3rem;
+}
+@media (max-width:790px){
+    header{
+        background:yellowgreen;
+        height:100px;
+    }
+    header h2{
+        font-size:1.2rem;
+        margin-left:2px;
+    }
+    header ul{
+        margin-right:9px;
+    }
+    header ul li{
+        margin-right:16px;
+    }
+    header ul li a{
+        color:honeydew;
+    }
+    main{
+        min-height:73vh;
+    }
+
+    footer{
+        height:90px;
+        background:yellowgreen;
+    }
+}
+@media (max-width:415px){
+    body{
+        height:100dvh;
+        background-image:url('homebg.jpg');
+        background-position:center;
+        background-attachment:fixed;
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+    header{
+        height:70px;
+        background:rgba(43, 180, 226, 0.502);
+        
+    }
+    header h2{
+        font-size:1rem;
+        margin-left:2%;
+        margin-right:10%;
+    }
+    header ul{
+        margin-right:8%;
+    }
+    header ul li{
+        margin-right:10px;
+    }
+    header ul li a{
+        color:greenyellow;
+        font-size:.888rem;
+    }
+    main{
+        height:72dvh;
+        color:red;
+        font-size:.8rem;
+    }
+    footer{
+        background:rgba(43, 226, 186, 0.397);
+        height:80px;
+        padding:5px;
+    }
+    footer p{
+        font-size:15px;
+        color:white;
+        margin-top:0px;
+    }
+
+}

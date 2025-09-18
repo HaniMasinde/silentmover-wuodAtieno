@@ -1,0 +1,214 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:slategray;
+}
+header{
+    background:rgba(87, 85, 87, 0.157);
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    border-radius:10px;
+    border:2px solid black;
+    align-items:center;
+    height:100px;
+}
+header h2{
+    font-size:2rem;
+    font-family:Arial, Helvetica, sans-serif;
+}
+header ul{
+    display:flex;
+    margin-right:10%;
+}
+header ul li{
+    list-style:none;
+    margin-left:40px;
+    font-size:20px;
+}
+header ul li a{
+    text-decoration:none;
+    color:white;
+}
+section .overall-container{
+    display:flex;
+}
+.overall-container .info{
+    font-size:22px;
+    margin-left:5px;
+    margin-top:8px;
+    width:70vw;
+}
+.overall-container .info h2{
+    font-size:1.5rem;
+    color:indianred;
+    margin-left:10px;
+}
+.overall-container .info ul{
+    margin-left:10%;
+    margin-top:5px;
+    margin-bottom:20px;
+}
+.overall-container .info p{
+    margin-top:10px;
+}
+.overall-container .image-container{
+    background:yellow;
+    width:500px;
+    height:500px;
+    margin-right:2%;
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    padding:3px;
+}
+.overall-container .image-container .image-item{
+    width:100%;
+    height:100%;
+    background:green;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+}
+.overall-container .image-container .image-item img{
+    width:100%;
+    height:100%;
+    border-radius:inherit;
+}
+.cv button{
+    width:150px;
+    height:45px;
+    margin:15px 15px 15px;
+    border:none;
+    font-size:20px;
+    background:chartreuse;
+}
+.social-links{
+    display:flex;
+    margin-left:15px;
+    justify-content:center;
+    margin-bottom:15px;
+    gap:30px;
+}
+.social-links a{
+    text-decoration:none;
+    font-size:20px;
+    color:rgb(128, 0, 109);
+}
+footer{
+    display:flex;
+    flex-direction:column;
+    margin-top:10px;
+    padding:15px;
+    background:rgba(87, 85, 87, 0.157);
+    border-radius:14px;
+}
+footer p{
+    text-align:center;
+    margin-bottom:0px;
+    font-size:20px;
+}
+@media(max-width:767px){
+    body{
+        background:linear-gradient(to left,rgba(0, 128, 0, 0.675),rgba(255, 0, 0, 0.692));
+    }
+    header{
+        background:linear-gradient(to left,rgba(97, 226, 97, 0.482),rgba(239, 10, 10, 0.424));
+        height:90px;
+        border:1px solid green;
+    }
+    header h2{
+        font-size:1.3rem;
+        margin-right:40px;
+        font-weight:600;
+    }
+    header ul li{
+        font-size:1.1rem;
+        margin-left:30px;
+    }
+    header ul li a{
+        color: yellow;
+    }
+     section .overall-container{
+        flex-wrap:wrap;
+     }
+    .overall-container .info{
+        font-size:19px;
+        width:95vw;
+    }
+    .overall-container .info h2{
+        color:greenyellow;
+    }
+    .overall-container .image-container{
+        width:450px;
+        height:450px;
+        margin-left:2%;
+    }
+    .cv button{
+        width:120px;
+        font-size:18px;
+        height: 38px;
+        border-radius: 5px;
+        background:linear-gradient(to top,rgba(255, 0, 0, 0.437),rgba(10, 136, 10, 0.535));
+    }
+    .social-links{
+        gap:20px;
+    }
+    .social-links a{
+        color:white;
+    }
+    footer{
+        background:linear-gradient(to left,rgba(97, 226, 97, 0.482),rgba(239, 10, 10, 0.424));
+    }
+}
+@media(max-width:415px){
+    body{
+        background:linear-gradient(to left ,blue,blueviolet);
+    }
+    header{
+        background:rgba(137, 43, 226, 0.464);
+        height:70px;
+    }
+    header h2{
+        font-size:1rem;
+        margin-right:18px;
+    }
+    header ul{
+        margin-left:0px;
+    }
+    header ul li{
+        margin-left:20px;
+        font-size:.999rem;
+    }
+    .overall-container .image-container{
+        width:400px;
+        height:400px;
+        padding:2px;
+    }
+    .cv button{
+        width:97px;
+        height:34px;
+        background:green;
+        color:white;
+        font-size:15px;
+        border:1px solid red;
+    }
+    .social-links{
+        gap:10px;
+    }
+    .social-links a{
+        font-size:18px;
+    }
+     footer{
+        background:rgba(137, 43, 226, 0.464);
+    }
+    footer p{
+        font-size:18px;
+    }
+}
