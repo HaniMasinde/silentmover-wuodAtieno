@@ -27,13 +27,13 @@ regForm.addEventListener('submit', function (e) {
             isValid = false;
             return;
         }
-        if (username.length < 6) {
-            usernameError.textContent = 'Username must have at least 6 characters';
+        if (username.length < 4) {
+            usernameError.textContent = ' must have at least 4 characters';
             isValid = false;
             return;
         }
         if (username.length > 8) {
-            usernameError.textContent = 'Username must have at most 8 characters';
+            usernameError.textContent = ' must have at most 8 characters';
             isValid = false;
             return;
         }
